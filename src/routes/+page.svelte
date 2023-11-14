@@ -1,15 +1,17 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+	import type { DrawerSettings } from '@skeletonlabs/skeleton';
+	import { AppBar, LightSwitch, popup, getModalStore } from '@skeletonlabs/skeleton';
+	import {getDrawerStore} from '@skeletonlabs/skeleton';
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
-	</div>
-</div>
+	const drawerStore = getDrawerStore();
+	function drawerOpen(): void {
+		const s: DrawerSettings = { id: 'doc-sidenav' };
+		drawerStore.open(s);
+	}
+</script>
+
+<AppBar shadow="shadow-2xl" slotTrail="!space-x-2">
+			<button on:click={drawerOpen} class="btn-icon btn-icon-sm lg:!hidden">
+				<i class="fa-solid fa-bars text-xl" />
+			</button>
+</AppBar>
