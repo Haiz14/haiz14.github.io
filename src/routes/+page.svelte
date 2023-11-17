@@ -1,17 +1,23 @@
 <script lang="ts">
-	import type { DrawerSettings } from '@skeletonlabs/skeleton';
-	import { AppBar, LightSwitch, popup, getModalStore } from '@skeletonlabs/skeleton';
-	import {getDrawerStore} from '@skeletonlabs/skeleton';
-
-	const drawerStore = getDrawerStore();
-	function drawerOpen(): void {
-		const s: DrawerSettings = { id: 'doc-sidenav' };
-		drawerStore.open(s);
-	}
+	/**
+	- Add aigh good morning <name>, a nice day ain't it?
+	- make greetings changeable
+	- add CTO
+	- add things to gain
+	- add show off
+	*/
+	const persons: Array<string> = [
+	"Artsy", "ballsy", "natalie", "makenley",
+	"amory", "nory", "disckens", "arnoldd,",
+	"andy", "nelosn", "raj", "amy",
+	"buck", "nirris", "nand", "antsy"
+	]
 </script>
+{#each persons as person}
+	<h2 class="h2"> name: {person} </h2>
+{/each}
 
-<AppBar shadow="shadow-2xl" slotTrail="!space-x-2">
-			<button on:click={drawerOpen} class="btn-icon btn-icon-sm lg:!hidden">
-				<i class="fa-solid fa-bars text-xl" />
-			</button>
-</AppBar>
+{#each persons as person}
+	<h2 class="h2"> name: {person} </h2>
+{/each}
+
