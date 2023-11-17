@@ -1,8 +1,7 @@
 <script lang="ts">
 	/**
+	add foooter component
 	add side bar compinent
-	add app bar component
-	add app shell
 	*/
 	// css
 	import '../app.postcss';
@@ -10,6 +9,7 @@
 	import '@fortawesome/fontawesome-free/css/brands.css';
 	import '@fortawesome/fontawesome-free/css/solid.css';
 
+	import {AppShell} from '@skeletonlabs/skeleton'
 	import AppBar from '$lib/AppBar.svelte'
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -19,5 +19,9 @@
 
 	initializeStores();
 </script>
-<AppBar/>
-<slot />
+<AppShell>
+	<svelte:fragment slot="pageHeader">
+		<AppBar/>
+	</svelte:fragment>
+		<slot />
+</AppShell>	
