@@ -16,10 +16,8 @@ export default {
 		skeleton({
 			themes: {
 				preset: [
-					{
-						name: 'vintage',
-						enhancements: true,
-					},
+					{ name: 'vintage', enhancements: true},
+					{ name: 'modern', enhancements: true}
 				],
 			},
 		}),
