@@ -1,4 +1,6 @@
-- 🔴 routes/+layout.svelte
+- footer
+- page.svelte
 
 second-sessiom
-- +page.svelte
+- routes.svelte
+- lib/NavBar.svelte

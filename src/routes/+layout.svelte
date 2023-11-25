@@ -1,7 +1,9 @@
 <script lang="ts">
 	/**
-	add foooter component
-	add side bar compinent
+	- add footer
+
+	- make header component hide on scroll donw
+	- make header component visible on scroll up
 	*/
 	// css
 	import '../app.postcss';
