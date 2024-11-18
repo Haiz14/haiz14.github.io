@@ -2,7 +2,13 @@
 	import content from "$lib/content.json";
 </script>
 
-<h1 class="text-5xl"> {content.quote} </h1>
-<h4 class="text-xl"> {content.quote_expansion} </h4>
-<a class="" href={"mailto:" + content.email_address + "?subject=" + content.subject}> {content.cta} </a>
-<p class=""> {content.pricing}</p>
+<div class="my-20 mx-4 space-y-10">
+	<div class="space-y-6">
+		<h1 class="text-5xl"> {content.quote} </h1>
+		<h4 class="text-2xl leading-10"> {content.quote_expansion} </h4>
+  </div>
+	<div>
+		<a class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-4 rounded" href={"mailto:" + content.email_address + "?subject=" + content.subject}> {content.cta} </a>
+	</div>
+	<!-- <p class=""> {content.pricing}</p> -->
+</div>
